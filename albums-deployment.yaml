@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gin-albums-app
+  labels:
+    app: gin-albums
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gin-albums
+  template:
+    metadata:
+      labels:
+        app: gin-albums
+    spec:
+      containers:
+      - name: gin-albums
+        image: 759984737373.dkr.ecr.ap-southeast-2.amazonaws.com/kilinov/gin-service-linux:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
