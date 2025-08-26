@@ -2,6 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: gin-albums-service
+  namespace: pipeline-test
+  annotations:
+    service.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "ip"
+    service.beta.kubernetes.io/aws-load-balancer-internal: "false"   # internet-facing
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+    # Optional: pin to specific public subnets if discovery still complains
+    service.beta.kubernetes.io/aws-load-balancer-subnets: "subnet-532f541a,subnet-66a7e901,subnet-2909c971"
 spec:
   selector:
     app: gin-albums
