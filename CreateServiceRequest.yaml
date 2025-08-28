@@ -7,7 +7,7 @@ networkConfiguration:
       - sg-7a367c03
     subnets:
       - subnet-532f541a
-    assignPublicIp: ENABLED
+    #assignPublicIp: ENABLED
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 100
