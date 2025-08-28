@@ -45,7 +45,7 @@ containerDefinitions:
 placementConstraints: []
 memory: '512'
 taskRoleArn: arn:aws:iam::759984737373:role/ecsTaskExecutionRole
-family: <+stage.variables.task_family>
+family: fargate-gin-service-task-definition
 pidMode:
 requiresCompatibilities:
 - FARGATE
