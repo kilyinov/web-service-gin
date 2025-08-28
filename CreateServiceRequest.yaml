@@ -1,6 +1,6 @@
 launchType: FARGATE
 serviceName: ginecs
-desiredCount: 1
+desiredCount: 2
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
