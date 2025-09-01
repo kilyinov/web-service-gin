@@ -1,13 +1,13 @@
 launchType: FARGATE
 serviceName: ginecs
-desiredCount: 2
+desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
-      - sg-7a367c03
+      - sg-0ba2f99b9a7c1cfbd
     subnets:
-      - subnet-532f541a
-    assignPublicIp: ENABLED
+      - subnet-08ad370c4a409ab48
+    assignPublicIp: DISABLED
 deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 100
