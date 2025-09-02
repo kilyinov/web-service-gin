@@ -13,6 +13,6 @@ deploymentConfiguration:
   maximumPercent: 200
   minimumHealthyPercent: 100
 loadBalancers:
-  - targetGroupArn: arn:aws:elasticloadbalancing:ap-southeast-2:759984737373:targetgroup/kilinov-targetgroup-bluegreen/57d59101b6b66fa5
+  - targetGroupArn: <+targetGroupArn>
     containerName: ginecs
     containerPort: 8080
